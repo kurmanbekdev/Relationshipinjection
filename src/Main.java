@@ -15,7 +15,7 @@ public class Main {
                 a = in.nextInt();
             }
             if (a == 2) {
-                System.out.println("Imdex:");
+                System.out.println("Successfuly deleted");
                 b = in.nextInt();
                 al.remove(b);
             }
