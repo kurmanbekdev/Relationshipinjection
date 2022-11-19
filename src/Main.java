@@ -4,25 +4,31 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        ArrayList<Users> al = new ArrayList<>();
-        int b ;
-        System.out.println("1 -> save user" + "\n" + "2 -> delete user" + "\n" + "3 -> save user");
-        int a = in.nextInt();
-        while (a != 3) {
+        Scanner in1 = new Scanner(System.in);
+        ArrayList<Users> all = new ArrayList<>();
+
+        while (true) {
+            System.out.println("1 -> save user" + "\n" + "2 -> delete user" + "\n" + "3 -> save user");
+            int a = in.nextInt();
             if (a == 1) {
-                al.add(new Users(in.next(), in.next(), in.nextInt()));
-                System.out.println("1 -> save user" + "\n" + "2 -> delete user" + "\n" + "3 -> save user");
-                a = in.nextInt();
+                System.out.print("name: ");
+                String name = in1.nextLine();
+                System.out.print("last name: ");
+                String lastName = in1.nextLine();
+                System.out.println("age: ");
+                int age = in.nextInt();
+                all.add(new Users(name, lastName, age));
             }
             if (a == 2) {
-                System.out.println("Successfuly deleted");
-                b = in.nextInt();
-                al.remove(b);
+                int toRemove = in.nextInt();
+                all.remove(toRemove);
+                System.out.println("Successfully deleted");
+            }
+            if (a == 3) {
+                System.out.println(all);
             }
         }
-        if (a == 3) {
-            System.out.println("\n" + al);
-        }
+
     }
 }
 

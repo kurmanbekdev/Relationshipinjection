@@ -15,7 +15,7 @@ public class Users{
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
-                '}';
+                '}'+"\n";
     }
 }
 
