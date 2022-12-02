@@ -5,20 +5,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Scanner in1 = new Scanner(System.in);
-        mystery(in.nextInt(),in1.nextLine());
-    }
-    public static void mystery(int b,String c){
         ArrayList<Users> all = new ArrayList<>();
+
         while (true) {
             System.out.println("1 -> save user" + "\n" + "2 -> delete user" + "\n" + "3 -> save user");
-            int a = b;
+            int a = in.nextInt();
             if (a == 1) {
                 System.out.print("name: ");
-                String name = c;
+                String name = in1.nextLine();
                 System.out.print("last name: ");
-                String lastName = c;
+                String lastName = in1.nextLine();
                 System.out.println("age: ");
-                int age = b;
+                int age = in.nextInt();
                 all.add(new Users(name, lastName, age));
             }
             if (a == 2) {
