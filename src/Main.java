@@ -6,10 +6,12 @@ public class Main {
         Scanner in = new Scanner(System.in);
         Scanner in1 = new Scanner(System.in);
         ArrayList<Users> all = new ArrayList<>();
-
+        mystery(in.nextInt(),in1);
+    }
+    public static void mystery(int b,int c){
         while (true) {
             System.out.println("1 -> save user" + "\n" + "2 -> delete user" + "\n" + "3 -> save user");
-            int a = in.nextInt();
+            int a = b;
             if (a == 1) {
                 System.out.print("name: ");
                 String name = in1.nextLine();
@@ -28,7 +30,6 @@ public class Main {
                 System.out.println(all);
             }
         }
-
     }
 }
 
